@@ -1343,6 +1343,15 @@
 		reg = <0xc3f000c 8>;
 	};
 
+	ramoops: ramoops@80880000 {
+		compatible = "removed-dma-pool", "ramoops";
+		reg = <0 0x80880000 0 0x00080000>;
+		record-size = <0x10000>;
+		console-size = <0x60000>;
+		pmsg-size = <0x10000>;
+		no-map;
+	};
+
 	dcc: dcc_v2@10a2000 {
 		compatible = "qcom,dcc-v2";
 		reg = <0x10a2000 0x1000>,
